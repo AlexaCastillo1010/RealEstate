@@ -1,0 +1,133 @@
+.about {
+    height: auto; /* Allow height to adjust based on content */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px; /* Reduced bottom margin */
+    padding: 0 20px; /* Add padding for better spacing */
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem; /* Use rem for better scalability */
+    font-weight: 600;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px; /* Add space below title */
+}
+
+.mainAbout {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Align items to the start */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.firstHalfAbout {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px; /* Add padding for spacing */
+}
+
+.herpic {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actualPic {
+    width: 300px; /* Adjusted size for better responsiveness */
+    height: 300px; /* Adjusted size for better responsiveness */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hersocials {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px; /* Reduced margin */
+}
+
+.secondHalfAbout {
+    width: 50%;
+    padding: 20px; /* Add padding for spacing */
+}
+
+.halfAboutText, .anotherHalfAboutText {
+    margin-bottom: 20px; /* Add space between paragraphs */
+}
+
+.firstText {
+    font-size: 2rem; /* Use rem for better scalability */
+    font-weight: bold;
+}
+
+.thirdText, .secondText, .fourthText {
+    font-size: 1rem; /* Use rem for better scalability */
+    line-height: 1.5; /* Improve readability */
+}
+
+.socials1 {
+    width: 50px; /* Adjusted size for better responsiveness */
+    height: 50px; /* Adjusted size for better responsiveness */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mainAbout {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    .firstHalfAbout, .secondHalfAbout {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .actualPic {
+        width: 200px; /* Smaller size for mobile */
+        height: 200px; /* Smaller size for mobile */
+    }
+
+    .title {
+        font-size: 2.5rem; /* Smaller title on mobile */
+    }
+
+    .firstText {
+        font-size: 1.5rem; /* Smaller name on mobile */
+    }
+
+    .thirdText, .secondText, .fourthText {
+        font-size: 0.9rem; /* Smaller text on mobile */
+    }
+
+    .socials1 {
+        width: 40px; /* Smaller social icons */
+        height: 40px; /* Smaller social icons */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem; /* Further reduce title size */
+    }
+
+    .firstText {
+        font-size: 1.2rem; /* Further reduce name size */
+    }
+
+    .thirdText, .secondText, .fourthText {
+        font-size: 0.8rem; /* Further reduce text size */
+    }
+}

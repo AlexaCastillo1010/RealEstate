@@ -1,0 +1,186 @@
+.looking{
+    height: 600px;
+    width: 100%;
+    position: relative; /* Add this */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.imageLooking {
+    width: 100%;
+    height: 100%;
+    animation: fadeUp 0.8s ease-out forwards;
+    opacity: 0;
+   
+    top: 0;
+    left: 0;
+    z-index: 1; /* Lower z-index */
+}
+.actualImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.formlooking{
+    width: 90%;
+    height: 29%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeUp 0.8s ease-out forwards;
+    opacity: 0;
+    border-radius: 20px;
+    flex-direction: row;
+    padding: 25px;
+    position: absolute; /* Add this */
+    top: 410px; /* Adjust as needed */
+    left: 2;
+    z-index: 1; /* Higher z-index */
+    background-color: #FFFFFF;
+    align-self: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+   
+    
+}
+.labelsAndInput{
+    width: 88%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.labelandInput1 {
+    width: 100%;
+    gap: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.labelName{
+    font-size: 20px;
+   
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+.inputsinform{
+    width: 80%;
+    height: 40%;
+    border-radius: 10px;
+    color: #5a5a5a;
+    border-color: #afafaf;
+    border: 1px solid #afafaf;
+    padding-left: 13px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    
+}
+.buttonlooking{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    color: #FFFFFF;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.submitButton{
+    width: 80%;
+    height: 60%;
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 23px;
+}
+
+/* Initial state: hidden and moved down */
+.fade-up-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Final state: visible and in place */
+.fade-up-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Add this media query to make the form responsive */
+@media (max-width: 768px) {
+   
+    .formlooking {
+        
+        flex-direction: column; /* Stack elements vertically */
+        width: 95%; /* Adjust width for smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+        top: 10px; /* Adjust position for smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .labelsAndInput {
+        color: #000000;
+        flex-direction: column; /* Stack inputs vertically */
+        width: 100%; /* Full width for inputs */
+    }
+
+    .labelandInput1 {
+        color: #000000;
+        width: 100%; /* Full width for each input container */
+        margin-bottom: 15px; /* Add space between inputs */
+    }
+
+    .inputsinform {
+        color: #000000;
+        width: 100%; /* Full width for inputs */
+        height: 40px; /* Set a fixed height for inputs */
+    }
+
+    .buttonlooking {
+        width: 100%; /* Full width for button container */
+        margin-top: 10px; /* Add space above the button */
+    }
+
+    .submitButton {
+        width: 100%; /* Full width for the button */
+        height: 50px; /* Set a fixed height for the button */
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Additional media query for very small screens */
+@media (max-width: 480px) {
+    .formlooking {
+        top: 10px; /* Further adjust position for very small screens */
+    }
+
+    .labelName {
+
+        font-size: 18px; /* Adjust font size for labels */
+    }
+
+    .inputsinform {
+        height: 35px; /* Adjust height for inputs */
+    }
+
+    .submitButton {
+        height: 45px; /* Adjust height for button */
+        font-size: 18px; /* Adjust font size for button */
+    }
+}

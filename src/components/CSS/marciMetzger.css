@@ -1,0 +1,79 @@
+.marci-metzger {
+    width: 100%;
+    height: auto; /* Change to auto for better responsiveness */
+    animation: fadeUp 0.8s ease-out forwards;
+    opacity: 0;
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px 20px; /* Added padding for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.gap {
+    margin-top: 60px;
+}
+
+.nameMarci {
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    font-size: 50px;
+    font-weight: 600; /* Slightly bolder */
+    color: #333; /* Darker text color */
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+.nameinMarci {
+    text-decoration: underline;
+    font-size: 80px;
+    font-weight: 700; /* Bolder font weight */
+    color: #000; /* Black for strong contrast */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Softer shadow */
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.ridge {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    color: #555; /* Softer text color */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* Fade-up animation with bounce effect */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nameMarci {
+        font-size: 30px; /* Smaller font size for mobile */
+    }
+
+    .nameinMarci {
+        font-size: 50px; /* Smaller font size for mobile */
+    }
+
+    .ridge {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+}
